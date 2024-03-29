@@ -1,0 +1,85 @@
+{
+	"explorer.confirmDragAndDrop": false,
+    "files.autoSave": "afterDelay",
+    "explorer.confirmDelete": false,
+	"git.confirmSync": false,
+    "extensions.ignoreRecommendations": true,
+	"editor.insertSpaces": false,
+	"git.enableSmartCommit": true,
+	"editor.detectIndentation": false,
+	"terminal.integrated.enableMultiLinePasteWarning": false,
+	"editor.autoClosingBrackets": "beforeWhitespace",
+	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+	"editor.autoIndent": "keep",
+	"editor.minimap.enabled": false,
+	"editor.rulers": [
+		80
+	],
+	"cmake.showOptionsMovedNotification": false,
+	"cmake.configureOnOpen": false,
+	"window.zoomLevel": 1,
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"workbench.colorTheme": "Solarized Light",
+	"vscode-pets.petSize": "small",
+	"vscode-pets.throwBallWithMouse": true,
+	"git.autofetch": true,
+
+	"workbench.colorCustomizations": {
+
+	/* TABS */
+	"editorGroupHeader.tabsBackground":"#E1DFD7",
+	"tab.activeBackground": "#A5A58D",
+	"tab.inactiveBackground": "#BCBCAA",
+	"tab.activeForeground": "#FFF8E6",
+	"tab.inactiveForeground": "#FFF8E6",
+	"tab.hoverForeground": "#37372C",
+
+	/* EDITOR */
+	"editorLineNumber.foreground": "#37372C",
+	"editor.background": "#ffffff",
+	"editorGutter.background": "#F5F5F2",
+	"breadcrumb.foreground": "#37372C",
+	"sideBar.background": "#E1DFD7",
+	"breadcrumb.background": "#E1DFD7",
+	"panel.border": "#37372C",
+	"sideBar.border": "#37372C",
+	"contrastBorder": "#37372C",
+	"editorGroup.border": "#A5A58D",
+
+	/* SELECTION */
+	"editor.selectionBackground": "#ffcb69",
+	"editor.hoverHighlightBackground": "#ffcb69",
+	"editor.wordHighlightTextBackground": "#ffcb6971",
+	"editor.selectionHighlightBackground": "#ffcb6971",
+
+	"terminal.background": "#ffffff",
+	"terminal.foreground": "#37372C",
+	"terminal.selectionBackground": "#A5A58D",
+	"terminalCommandDecoration.defaultBackground": "#ffcb69",
+	"terminalCommandDecoration.successBackground": "#c9cba3",
+	"terminalCommandDecoration.errorBackground": "#f27059",
+	"terminalCursor.foreground": "#c1d87c",
+
+
+	/* GIT */
+	"gitDecoration.modifiedResourceForeground": "#663E28",
+    // gitDecoration.addedResourceForeground: Color for added Git resources. Used for file labels and the SCM viewlet.
+    // gitDecoration.modifiedResourceForeground: Color for modified Git resources. Used for file labels and the SCM viewlet.
+    // gitDecoration.deletedResourceForeground: Color for deleted Git resources. Used for file labels and the SCM viewlet.
+    // gitDecoration.renamedResourceForeground: Color for renamed or copied Git resources. Used for file labels and the SCM viewlet.
+    // gitDecoration.stageModifiedResourceForeground: Color for staged modifications git decorations. Used for file labels and the SCM viewlet.
+    // gitDecoration.stageDeletedResourceForeground: Color for staged deletions git decorations. Used for file labels and the SCM viewlet.
+    // gitDecoration.untrackedResourceForeground: Color for untracked Git resources. Used for file labels and the SCM viewlet.
+    // gitDecoration.ignoredResourceForeground: Color for ignored Git resources. Used for file labels and the SCM viewlet.
+    // gitDecoration.conflictingResourceForeground: Color for conflicting Git resources. Used for file labels and the SCM viewlet.
+    // gitDecoration.submoduleResourceForeground: Color for submodule resources.
+	},
+	"workbench.iconTheme": "vscode-stardew-icon-theme-autumn",
+	"workbench.tips.enabled": false,
+	"workbench.editor.closeOnFileDelete": true,
+	"workbench.editor.labelFormat": "short"
+}
+
+
