@@ -7,7 +7,7 @@
 	"editor.insertSpaces": false,
 	"git.enableSmartCommit": true,
 	"editor.detectIndentation": false,
-	"terminal.integrated.enableMultiLinePasteWarning": false,
+	"terminal.integrated.enableMultiLinePasteWarning": "never",
 	"editor.autoClosingBrackets": "beforeWhitespace",
 	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
 	"editor.autoIndent": "keep",
@@ -61,6 +61,22 @@
 	"terminalCommandDecoration.successBackground": "#c9cba3",
 	"terminalCommandDecoration.errorBackground": "#f27059",
 	"terminalCursor.foreground": "#c1d87c",
+	"terminal.ansiBlack": "#1d2021f3",
+	"terminal.ansiBrightBlack": "#665c54e3",
+	"terminal.ansiBlue": "#00d5ff",
+	"terminal.ansiBrightBlue": "#00d5ff",
+	"terminal.ansiCyan": "#00ffea",
+	"terminal.ansiBrightCyan": "#00ffea",
+	"terminal.ansiGreen": "#30b400",
+	"terminal.ansiBrightGreen": "#30b400",
+	"terminal.ansiMagenta": "#ff009d",
+	"terminal.ansiBrightMagenta": "#ff009d",
+	"terminal.ansiRed": "#f83a21",
+	"terminal.ansiBrightRed": "#f83a21",
+	"terminal.ansiWhite": "#ffffff",
+	"terminal.ansiBrightWhite": "#ffffff",
+	"terminal.ansiYellow": "#fac13b",
+	"terminal.ansiBrightYellow": "#fac13b",
 
 
 	/* GIT */
@@ -79,7 +95,13 @@
 	"workbench.iconTheme": "vscode-stardew-icon-theme-autumn",
 	"workbench.tips.enabled": false,
 	"workbench.editor.closeOnFileDelete": true,
-	"workbench.editor.labelFormat": "short"
+	"workbench.editor.labelFormat": "short",
+	"editor.renderWhitespace": "all",
+	"githubPullRequests.pullBranch": "never",
+	"window.confirmSaveUntitledWorkspace": false,
+	"explorer.confirmPasteNative": false,
+	"[cpp]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	}
 }
-
 
