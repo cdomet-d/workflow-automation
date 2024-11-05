@@ -1,3 +1,5 @@
+
+
 {
 	"explorer.confirmDragAndDrop": false,
     "files.autoSave": "afterDelay",
@@ -28,7 +30,7 @@
 
 	"workbench.colorCustomizations": {
 
-	/* TABS */
+	// /* TABS */
 	"editorGroupHeader.tabsBackground":"#E1DFD7",
 	"tab.activeBackground": "#A5A58D",
 	"tab.inactiveBackground": "#BCBCAA",
@@ -50,7 +52,7 @@
 
 	/* SELECTION */
 	"editor.selectionBackground": "#ffcb69",
-	"editor.hoverHighlightBackground": "#ffcb69",
+	"editor.hoverHighlightBackground": "#ffcb6985",
 	"editor.wordHighlightTextBackground": "#ffcb6971",
 	"editor.selectionHighlightBackground": "#ffcb6971",
 
@@ -78,30 +80,27 @@
 	"terminal.ansiYellow": "#fac13b",
 	"terminal.ansiBrightYellow": "#fac13b",
 
-
 	/* GIT */
 	"gitDecoration.modifiedResourceForeground": "#663E28",
-    // gitDecoration.addedResourceForeground: Color for added Git resources. Used for file labels and the SCM viewlet.
-    // gitDecoration.modifiedResourceForeground: Color for modified Git resources. Used for file labels and the SCM viewlet.
-    // gitDecoration.deletedResourceForeground: Color for deleted Git resources. Used for file labels and the SCM viewlet.
-    // gitDecoration.renamedResourceForeground: Color for renamed or copied Git resources. Used for file labels and the SCM viewlet.
-    // gitDecoration.stageModifiedResourceForeground: Color for staged modifications git decorations. Used for file labels and the SCM viewlet.
-    // gitDecoration.stageDeletedResourceForeground: Color for staged deletions git decorations. Used for file labels and the SCM viewlet.
-    // gitDecoration.untrackedResourceForeground: Color for untracked Git resources. Used for file labels and the SCM viewlet.
-    // gitDecoration.ignoredResourceForeground: Color for ignored Git resources. Used for file labels and the SCM viewlet.
-    // gitDecoration.conflictingResourceForeground: Color for conflicting Git resources. Used for file labels and the SCM viewlet.
-    // gitDecoration.submoduleResourceForeground: Color for submodule resources.
-	},
+    "gitDecoration.addedResourceForeground": "#b25d17e3",
+    "gitDecoration.deletedResourceForeground": "#f27059",
+    "gitDecoration.renamedResourceForeground": "#665c54e3",
+    "gitDecoration.stageModifiedResourceForeground": "#f27059",
+    "gitDecoration.stageDeletedResourceForeground":"#f27059",
+    "gitDecoration.untrackedResourceForeground": "#a39170",
+    "gitDecoration.ignoredResourceForeground": "#c9cba3",
+    "gitDecoration.conflictingResourceForeground": "#f27059",
+    "gitDecoration.submoduleResourceForeground": "#a3a0f8",
+
 	"workbench.iconTheme": "vscode-stardew-icon-theme-autumn",
 	"workbench.tips.enabled": false,
 	"workbench.editor.closeOnFileDelete": true,
 	"workbench.editor.labelFormat": "short",
-	"editor.renderWhitespace": "all",
+	"editor.renderWhitespace": "none",
 	"githubPullRequests.pullBranch": "never",
 	"window.confirmSaveUntitledWorkspace": false,
 	"explorer.confirmPasteNative": false,
-	"[cpp]": {
-		"editor.defaultFormatter": "ms-vscode.cpptools"
+	"editor.selectionClipboard": false,
+	"workbench.startupEditor": "none",
 	}
 }
-
