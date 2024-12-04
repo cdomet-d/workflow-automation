@@ -7,13 +7,16 @@ if [ "$1" = "-n" ]; then
 	rm norm
 fi
 
-if [ -f "out" ]; then
-	rm out
-fi
-if [ -f "minilog" ]; then
-	rm minilog
-fi
+# The following lines serve to remove work files and directories 
+# You can update them to tailor your needs
 
-if [ -d "scripts/output" ]; then
-	rm -r scripts/output
-fi
+# if [ -f "out" ]; then
+# 	rm out
+# fi
+# if [ -f "*.log" ]; then
+# 	rm *.log
+# fi
+
+# if [ -d "scripts/output" ]; then
+# 	rm -r scripts/output
+# fi
