@@ -1,13 +1,15 @@
-# Scripts and utils: a few tools to make your life easier. 
+# Scripts and utils: a few tools to make your life easier.
+
 Sometimes, programming gets pretty repetitive. Here are some of the scripts I wrote while studying at 42 to streamline some processes. Enjoy !
 
 # Scripts
 
-## create_class
+<details>
 
-Automates the creation of a basic C++ project structure, including 'headers' and 'src' directories, and generates .hpp and .cpp files for class names given as arguments. 
+<summary> Class File Creation (create class) </summary>
+Automates the creation of a basic C++ project structure, including 'headers' and 'src' directories, and generates .hpp and .cpp files for class names given as arguments.
 
-It is meant to be aliased and used directly in your directory (see [aliasing](#creating-an-alias-in-zshrc)). Keep in mind that aliasing needs to be done in your shell configuration file - for me it was zsh, but maybe you're using bash or something else.
+It is meant to be aliased and used directly in your directory (see [aliasing](#aliasing)). Keep in mind that aliasing needs to be done in your shell configuration file - for me it was zsh, but maybe you're using bash or something else.
 
 ### Features
 
@@ -23,6 +25,7 @@ It is meant to be aliased and used directly in your directory (see [aliasing](#c
 ```bash
 	chmod +x script_name.sh
 ```
+
 2. Run the script with class names as arguments:
 
 ```bash
@@ -33,9 +36,9 @@ It is meant to be aliased and used directly in your directory (see [aliasing](#c
 
 - If 'headers' or 'src' directories already exist, the script will notify you.
 - For each provided class name:
-	- If files already exist, it will notify you.
-	- If the class name doesn't start with an uppercase letter, it will show an error.
-	- Otherwise, it creates both .hpp and .cpp files in their respective directories.
+  - If files already exist, it will notify you.
+  - If the class name doesn't start with an uppercase letter, it will show an error.
+  - Otherwise, it creates both .hpp and .cpp files in their respective directories.
 
 ### Error Handling
 
@@ -43,7 +46,69 @@ It is meant to be aliased and used directly in your directory (see [aliasing](#c
 - Notifies if directories or files already exist.
 - Warns if a class name doesn't start with an uppercase letter.
 
-### Creating an alias in .zshrc
+</details>
+
+<details>
+<summary> Function Extractor Script (exf) </summary>
+
+## Overview
+This Bash script is designed to generate a header file based on your C source code. It ignores static declarated functions. You can specify a directory from which to extract the prototypes.
+
+### Features
+
+- Recursively searches for .c files in a given directory
+- Extracts non-static function signatures
+- Organizes output by directory and filename
+- Saves extracted functions to an output file
+
+### Prerequisites
+
+- Bash shell
+- Basic Unix/Linux environment
+- grep, find, basename, dirname utilities
+
+## Usage
+
+```bash
+	chmod +x exf
+	bash exf
+
+	# search within a directory
+	bash exf dir/to/search
+```
+## Output
+
+- Functions are saved in scripts/output/header
+- Output includes:
+	- Directory separators
+	- Filename headers
+	- Function signatures
+
+```c
+// src ------------------------------------ > directory in which file was found
+/* file1.c > file from which the function was extracted */ 
+int	main(int argc, char *argv[]);
+void	helper_function(const char *param);
+```
+
+## Limitations
+
+- Works best with standard C function declarations
+- May not perfectly parse complex function prototypes
+- Your code must be up to Norme in order for the script to work.
+- Requires well-formatted source code
+
+In order for the script to pick up on your prototypes, they must be formatted as follows
+
+`[a-z].*	.*[a-z].*\([^)]*\)`
+
+which means : 
+
+- any number of lowercase letters followed by a **tab**, followed by any number of lowercase letters;
+- you must have opening and closing parenthesesis at some point.
+</details>
+
+# Aliasing
 
 To create an alias for this script in your .zshrc file:
 
@@ -54,9 +119,10 @@ To create an alias for this script in your .zshrc file:
 ```
 
 2. Add the following line (replace `/path/to/script.sh` with the actual path):
-> you can make the alias name anything you want
+   > you can make the alias name anything you want
+
 ```bash
-	alias cclass='bash ~/path/to/create_class'
+	alias cclass='bash ~/path/to/script_name'
 ```
 
 3. Save the file and exit the editor.
@@ -67,3 +133,15 @@ To create an alias for this script in your .zshrc file:
 source ~/.zshrc
 ```
 Now you can use the alias to run the script from anywhere!
+
+# vscode-config
+
+In that folder, you will find:
+- My vscode theme, which is high contrast and light; it is easy to modify should you want to do it. [Look up how to develop a custom VsCode Theme](https://code.visualstudio.com/docs/getstarted/themes#_customize-a-color-theme).
+	<details> 
+	<summary> Theme preview </summary>
+		(/theme_preview/editor.png "editor")
+	</details>
+- Two [code snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets): 
+	- One to generate canonical classes in CPP98, 
+	- One to generate file-appropriate header guards.
