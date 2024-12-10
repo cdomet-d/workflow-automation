@@ -1,0 +1,30 @@
+Hey ! 
+
+Those are my scripts. They are pretty useful. 
+
+The readme is not really readable on terminal, so if you want to read it properly,
+go to: https://github.com/cdomet-d/Scripts-and-stuff/blob/main/readme.md
+
+It has all the details you need in order to run the scripts and use the utility files here.
+
+If you just want to use the scripts, just copy what you need from here to your own home.
+
+cp script-name ~/my/own/place
+
+or 
+
+cp -r script-directory ~/my/own/place
+
+cheers! 
+
+cdomet-d
+
+                    _
+                  _(_)_                          wWWWw   _
+      @@@@       (_)@(_)   vVVVv     _     @@@@  (___) _(_)_
+     @@()@@ wWWWw  (_)\    (___)   _(_)_  @@()@@   Y  (_)@(_)
+      @@@@  (___)     `|/    Y    (_)@(_)  @@@@   \|/   (_)\
+       /      Y       \|    \|/    /(_)    \|      |/      |
+    \ |     \ |/       | / \ | /  \|/       |/    \|      \|/
+jgs \\|//   \\|///  \\\|//\\\|/// \|///  \\\|//  \\|//  \\\|// 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

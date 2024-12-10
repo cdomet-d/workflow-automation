@@ -28,5 +28,5 @@ if [ $# -gt 0 ]; then
 		fi
 	done
 else
-    echo "Expected one argument"
+	echo "Expected one argument"
 fi

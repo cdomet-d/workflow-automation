@@ -111,7 +111,7 @@ which means :
 # Aliasing
 
 To create an alias for this script in your .zshrc file:
-
+> if you are not using zsh, you will need to check out how to alias for your own shell.
 1. Open your .zshrc file (usually at the root of your session (`~/`)):
 
 ```bash
@@ -137,11 +137,10 @@ Now you can use the alias to run the script from anywhere!
 # vscode-config
 
 In that folder, you will find:
-- My vscode theme, which is high contrast and light; it is easy to modify should you want to do it. [Look up how to develop a custom VsCode Theme](https://code.visualstudio.com/docs/getstarted/themes#_customize-a-color-theme).
-	<details> 
-	<summary> Theme preview </summary>
-		(/theme_preview/editor.png "editor")
-	</details>
+- My vscode theme, which is high contrast and light (see preview below). It is easy to modify should you want to. [Look up how to develop a custom VsCode Theme](https://code.visualstudio.com/docs/getstarted/themes#_customize-a-color-theme).
 - Two [code snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets): 
 	- One to generate canonical classes in CPP98, 
 	- One to generate file-appropriate header guards.
+
+
+![editor preview](theme_preview/editor.png)
