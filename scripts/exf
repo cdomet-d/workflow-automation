@@ -37,6 +37,6 @@ extract_functions() {
 }
 
 # Extract functions and save to output file
-extract_functions "$dir" > "$output_dir/fncts"
+extract_functions "$dir" > "$output_dir/header"
 
-echo "Function extraction complete. Output saved to $output_dir/fncts"
+echo "Function extraction complete. Output saved to $output_dir/header"
