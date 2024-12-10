@@ -142,5 +142,6 @@ In that folder, you will find:
 	- One to generate canonical classes in CPP98, 
 	- One to generate file-appropriate header guards.
 
-
+Theme preview:
+--
 ![editor preview](theme_preview/editor.png)
