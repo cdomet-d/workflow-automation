@@ -1,4 +1,4 @@
-# Scripts and utils: a few tools to make your life easier.
+# Scripts and utils: a few tools to make your life easier
 
 Sometimes, programming gets pretty repetitive. Here are some of the scripts I wrote while studying at 42 to streamline some processes. Enjoy !
 
@@ -23,13 +23,13 @@ It is meant to be aliased and used directly in your directory (see [aliasing](#a
 1. Make the script executable:
 
 ```bash
-	chmod +x script_name.sh
+ chmod +x script_name.sh
 ```
 
 2. Run the script with class names as arguments:
 
 ```bash
-	bash ./create_class ClassName1 ClassName2 ClassName3
+ bash ./create_class ClassName1 ClassName2 ClassName3
 ```
 
 ### Behavior
@@ -52,6 +52,7 @@ It is meant to be aliased and used directly in your directory (see [aliasing](#a
 <summary> Function Extractor Script (exf) </summary>
 
 ## Overview
+
 This Bash script is designed to generate a header file based on your C source code. It ignores static declarated functions. You can specify a directory from which to extract the prototypes.
 
 ### Features
@@ -70,25 +71,26 @@ This Bash script is designed to generate a header file based on your C source co
 ## Usage
 
 ```bash
-	chmod +x exf
-	bash exf
+ chmod +x exf
+ bash exf
 
-	# search within a directory
-	bash exf dir/to/search
+ # search within a directory
+ bash exf dir/to/search
 ```
+
 ## Output
 
 - Functions are saved in scripts/output/header
 - Output includes:
-	- Directory separators
-	- Filename headers
-	- Function signatures
+ 	- Directory separators
+ 	- Filename headers
+ 	- Function signatures
 
 ```c
 // src ------------------------------------ > directory in which file was found
 /* file1.c > file from which the function was extracted */ 
-int	main(int argc, char *argv[]);
-void	helper_function(const char *param);
+int main(int argc, char *argv[]);
+void helper_function(const char *param);
 ```
 
 ## Limitations
@@ -100,29 +102,31 @@ void	helper_function(const char *param);
 
 In order for the script to pick up on your prototypes, they must be formatted as follows
 
-`[a-z].*	.*[a-z].*\([^)]*\)`
+`[a-z].* .*[a-z].*\([^)]*\)`
 
-which means : 
+which means :
 
 - any number of lowercase letters followed by a **tab**, followed by any number of lowercase letters;
 - you must have opening and closing parenthesesis at some point.
+
 </details>
 
 # Aliasing
 
 To create an alias for this script in your .zshrc file:
 > if you are not using zsh, you will need to check out how to alias for your own shell.
+
 1. Open your .zshrc file (usually at the root of your session (`~/`)):
 
 ```bash
-	vim ~/.zshrc
+ vim ~/.zshrc
 ```
 
 2. Add the following line (replace `/path/to/script.sh` with the actual path):
    > you can make the alias name anything you want
 
 ```bash
-	alias cclass='bash ~/path/to/script_name'
+ alias cclass='bash ~/path/to/script_name'
 ```
 
 3. Save the file and exit the editor.
@@ -132,16 +136,19 @@ To create an alias for this script in your .zshrc file:
 ```bash
 source ~/.zshrc
 ```
+
 Now you can use the alias to run the script from anywhere!
 
 # vscode-config
 
 In that folder, you will find:
-- My vscode theme, which is high contrast and light (see preview below). It is easy to modify should you want to. [Look up how to develop a custom VsCode Theme](https://code.visualstudio.com/docs/getstarted/themes#_customize-a-color-theme).
-- Two [code snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets): 
-	- One to generate canonical classes in CPP98, 
-	- One to generate file-appropriate header guards.
 
-Theme preview:
+- My vscode theme, which is high contrast and light (see preview below). It is easy to modify should you want to. [Look up how to develop a custom VsCode Theme](https://code.visualstudio.com/docs/getstarted/themes#_customize-a-color-theme).
+- Two [code snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets):
+ 	- One to generate canonical classes in CPP98,
+ 	- One to generate file-appropriate header guards.
+
+Theme preview
 --
+
 ![editor preview](theme_preview/editor.png)

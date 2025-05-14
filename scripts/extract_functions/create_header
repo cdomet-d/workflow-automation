@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Set output directory
-output_dir="scripts/output"
-mkdir -p "$output_dir"
-
 # Determine the directory to search
 if [ $# == 1 ]; then
     dir="$1"
@@ -37,6 +33,6 @@ extract_functions() {
 }
 
 # Extract functions and save to output file
-extract_functions "$dir" > "$output_dir/header"
+extract_functions "$dir" > header.h
 
-echo "Function extraction complete. Output saved to $output_dir/header"
+echo "Function extraction complete. Output saved to header.h"

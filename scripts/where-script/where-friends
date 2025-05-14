@@ -1,0 +1,8 @@
+#!/bin/bash
+
+curl -X POST --data "grant_type=client_credentials&client_id=u-s4t2ud-2e7f92b205e9d8e8258fcd331ccb95d0f0d7c8972766c245e24ccd46aa4a4127&client_secret=$WHERE_SECRET" https://api.intra.42.fr/oauth/token > .token.json
+
+# curl -s -H "Authorization: Bearer ";
+# 	curlCmd_.push_back(URL_ + "v2/users/" + login);
+
+# {"access_token":"6d4cb299b26c690a85605074b8d0b1e0f1117973315c3ba93914e132919acc85","token_type":"bearer","expires_in":7200,"scope":"public","created_at":1747234142,"secret_valid_until":1749651868}% 
