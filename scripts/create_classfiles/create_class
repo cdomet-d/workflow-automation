@@ -1,12 +1,13 @@
-# !/bin/bash
-if ! find $PWD -maxdepth 1 -type d -name "headers" | grep -q .; then
+#!/bin/bash
+
+if ! find "$PWD" -maxdepth 1 -type d -name "headers" | grep -q .; then
 	mkdir "$PWD/headers"
 	echo "created dir: headers"
 else
 	echo "dir: headers already exists"
 fi
 
-if ! find $PWD -maxdepth 1 -type d -name "src" | grep -q .; then
+if ! find "$PWD" -maxdepth 1 -type d -name "src" | grep -q .; then
 	mkdir "$PWD/src"
 	echo "created dir: src"
 else
