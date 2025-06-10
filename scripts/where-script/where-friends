@@ -1,13 +1,17 @@
 #!/bin/bash
 
+set -eo pipefail
+
 if [ $# -eq 0 ];then 
 	echo "Usage: $0 <login>"
 	exit 1
 fi
 
 login="$1"
-abspath=~/Scripts-and-stuff/scripts/where-script
+abspath="/home/cdomet-d/workflow-utils/scripts/where-script"
 echo "Seeking user \"$login\"..."
+
+declare -i expiration
 
 if [ -f "$abspath"/bestbefore.json ]; then
 	expiration=$(jq -r '.expire' "$abspath"/bestbefore.json)
@@ -36,4 +40,5 @@ if jq -e -r '.location' "$abspath"/user.json >/dev/null; then
 else
 	echo "Error: no location found for \"$login\""
 fi
+
 rm "$abspath"/user.json
