@@ -2,7 +2,7 @@
 
 set -eo pipefail
 
-abspath="/home/cdomet-d/workflow-utils/scripts/tutor-tracking"
+abspath="${TOSCRIPT}tutor-tracking"
 
 while read -r line; do
 	bash "$abspath"/ttrack "$line"

@@ -5,29 +5,10 @@ if [ $# -eq 0 ]; then
 	exit 1
 fi
 
+bash "${TOSCRIPT}"api_gen.sh
+
 login="$1"
-abspath="/home/cdomet-d/workflow-utils/scripts/tutor-tracking"
-
-declare -i expiration
-
-if [ -f "$abspath"/bestbefore.json ]; then
-	expiration=$(jq -r '.expire' "$abspath"/bestbefore.json)
-	now=$(date +%s)
-else
-	expiration=0
-fi
-
-if [ "$now" -ge "$expiration" ]; then
-	if ! curl -s -X POST --data \
-		"grant_type=client_credentials&client_id=$WHERE_UID&client_secret=$WHERE_SECRET" \
-		https://api.intra.42.fr/oauth/token >"$abspath"/token.json; then
-		echo "Error: failed to obtain access token"
-		exit 1
-	fi
-	expire_in=$(jq -e -r '.expires_in' "$abspath"/token.json)
-	bestbefore=$(($(date +%s) + "$expire_in"))
-	jq -n --argjson exp "$bestbefore" \ '{expire_in: $exp}' >"$abspath"/bestbefore.json
-fi
+abspath="${TOSCRIPT}.json"
 
 token=$(jq -r '.access_token' "$abspath"/token.json)
 curl -s -H "Authorization: Bearer $token" https://api.intra.42.fr/v2/users/"$login" \
@@ -42,10 +23,12 @@ else
 fi
 
 echo -n "Level: "
-if jq -e -r '.cursus_users[] | select(.grade == "Cadet") | .level' "$abspath"/user.json>/dev/null; then
+if jq -e -r '.cursus_users[] | select(.grade == "Cadet") | .level' "$abspath"/user.json >/dev/null; then
 	jq '.cursus_users[] | select(.grade == "Cadet") | .level' "$abspath"/user.json
-else
+elif jq -e -r '.cursus_users[] | select(.grade == "Transcender") | .level' "$abspath"/user.json; then
 	jq '.cursus_users[] | select(.grade == "Transcender") | .level' "$abspath"/user.json
+else
+	jq '.cursus_users[] | select(.grade == "Pisciner") | .level' "$abspath"/user.json
 fi
 
 echo "Current projects: "
@@ -65,4 +48,4 @@ echo -n "Alone in the Dark grade: "
 jq '.projects_users[] | select(.project.name == "Alone in the Dark") | .final_mark' \
 	"$abspath"/user.json || echo "Alone in the Dark not found"
 
-rm "$abspath"/user.json >/dev/null 2>&1
+# rm "$abspath"/user.json >/dev/null 2>&1
